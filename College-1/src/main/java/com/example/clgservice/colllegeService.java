@@ -1,22 +1,25 @@
 package com.example.clgservice;
 
+import java.util.List;
+
 import com.example.clgmodel.college;
+import com.example.stumodel.student;
 
 public interface colllegeService {
-	
-	
 
+	college addCourse(college coursename);
 
-college addCourse(String coursename);
+	void deleteCourse(String coursename);
 
-void deleteCourse(String coursename);
+	college updateCourse(college coursename);
 
-college updateCourse(String coursename);
+	List<college> displayCourse();
 
-college displayCourse(String coursename);
+	student addStudent(student student);
 
-void addStudent(String student);   
-void deleteStudent(String student);
-void updateStudent(String student); 
-void displayStudent(String student);
+	void deleteStudent(int roll);
+
+	student updateStudent(student s, int roll);
+
+	List<student> displayStudent();
 }
